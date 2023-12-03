@@ -1,38 +1,113 @@
-.App {
-  text-align: center;
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container{
+  background-image: url("/public/images/bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-clip: border-box;
+  background-origin: border-box;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+.weather{
+  /* linear  */
+  background: rgba(5, 155, 209, 0.749);
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background: linear-gradient(225deg, rgba(5, 155, 209, 0.738) 10%, rgba(0, 194, 129, 0.631) 100%);
+  
+  background: -moz-linear-gradient(225deg, hsla(196, 95%, 42%, 1) 10%, rgba(0, 194, 129, 0.757) 100%);
+  
+  background: -webkit-linear-gradient(225deg, rgba(5, 155, 209, 0.696) 10%, rgba(0, 194, 129, 0.663) 100%);
+  
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#059CD3", endColorstr="#00C180", GradientType=1 );
+  /* linear  */
+  height: 450px;
+  width: 350px;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
+  padding: 25px 20px; 
+  border-radius: 15px;
+  
+
+}
+.searchbox{
+  display: flex;
+  width: 90%;
+  justify-content: space-between;
+}
+input , .searchbox span{
+  height: 40px;
+  overflow: hidden;
+
+}
+input{
+  width: 80%;
+  all: unset;
+  background: rgba(255, 255, 255, 0.67);
+  padding: 5px 15px ;
+  border-radius: 30px;
+}
+.searchbox span{
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.649);
+  padding: 5px;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
 
-.App-link {
-  color: #61dafb;
 }
+.searchbox span img{
+  width: 15px;
+  height: 15px;
+}
+.weatherpic img{
+  height: 150px;
+  width: 150px;
+}
+.weathernum{
+  font-size: 45px;
+  color: aliceblue;
+  font-weight: bold;
+}
+.city{
+  font-size: 45px;
+  color: aliceblue;
+}
+.lastbox{
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+}
+.humidity , .wind{
+  display: flex;
+  width: 38%;
+  height: 40px;
+  justify-content: space-between;
+  align-items: center;
+  color: rgb(255, 255, 255);
+}
+.lastbox img{
+  height: 25px;
+  width: 25px;
+}
+.wind {
+  width: 43%;
+}
+.labelh , .labelw{
+  color: rgb(231, 231, 231);
+  font-size: 13px;
 }
