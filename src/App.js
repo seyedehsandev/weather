@@ -3,7 +3,7 @@ import axios from 'axios';
 import "./App.css"
 
 function App() {
-  const [city, setCity] = useState('');
+  const [city, setCity] = useState("tehran");
   const [weatherPic, setWeatherPic] = useState('');
   const [temp, setTemp] = useState('');
   const [cityName, setCityName] = useState('');
@@ -62,10 +62,10 @@ function App() {
     }
   };
 
-  useEffect(() => {
-    fetchIp();
-    console.log("use ip", city);
-  }, []); 
+  // useEffect(() => {
+  //   fetchIp();
+  //   console.log("use ip", city);
+  // }, []); 
 
   useEffect(() => {
     const fetchData = async () => {
